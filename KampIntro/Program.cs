@@ -6,41 +6,43 @@ namespace KampIntro
 	{
 		static void Main(string[] args)
 		{
-			// type safety - tip güvenliği
-			//değer tutucu
-			string kategoriEtiketi = "Kategoriler";
-			int ogrenciSayisi = 32000; // int tam sayıları tutar
-			double faizOrani = 1.45;    //ondalıklık sayıları gösterir
-			bool sistemeGirisYapmisMi = false;
+			//type safety - tip güvenliği
+			//kategoriEtiketi değer tutucudur.
+			string kategoriEtiketi = "Kategori";
+			int ogrenciSayisi = 32000;
+			double faizOranı = 1.45;
+			bool sistemeGirisYapmisMi = true;
 			double dolarDun = 7.45;
 			double dolarBugun = 7.45;
 
-            if (dolarDun>dolarBugun)
+			if (dolarDun>dolarBugun)
+			{
+				Console.WriteLine("Azalış Butonu");
+			}
+			else if (dolarDun<dolarBugun)
             {
-				Console.WriteLine("Azalış butonu");
+				Console.WriteLine("Artış Butonu");
             }
-            else if (dolarDun<dolarBugun)
+            else
             {
-				Console.WriteLine("Artış butonu");
+				Console.WriteLine("Değişmedi butonu");
+            }
+
+
+            if (sistemeGirisYapmisMi == true)
+            {
+				Console.WriteLine("Kullanıcı ayarları butonu");
+				
 			}
             else
             {
-				Console.WriteLine("değişmedi butonu");
+				Console.WriteLine("Giriş Yap butonu");
             }
-				
-
-
-			if (sistemeGirisYapmisMi == true)
-            {
-				Console.WriteLine("Kulanıcı ayarları butonu");
-            }
-            else
-            {
-				Console.WriteLine("Giris yap butonu");
-            }
-
-
 			Console.WriteLine(kategoriEtiketi);
+		
+		
+
+
 
 		}
 	}
